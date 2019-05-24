@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XML-PDF</title>
+	<style type="text/css">
+			table {
+		  border-collapse: collapse;
+		  border-spacing: 0; }
+
+		td,
+		th {
+		  padding: 0; }
+		table, th, td {
+		  border: none; }
+
+		table {
+		  width: 100%;
+		  display: table; }
+		  table.bordered > thead > tr,
+		  table.bordered > tbody > tr {
+		    border-bottom: 1px solid #d0d0d0; }
+		  table.striped > tbody > tr:nth-child(odd) {
+		    background-color: #f2f2f2; }
+		  table.striped > tbody > tr > td {
+		    border-radius: 0; }
+		  table.highlight > tbody > tr {
+		    transition: background-color .25s ease; }
+		    table.highlight > tbody > tr:hover {
+		      background-color: #f2f2f2; }
+		  table.centered thead tr th, table.centered tbody tr td {
+		    text-align: center; }
+
+		thead {
+		  border-bottom: 1px solid #d0d0d0; }
+
+		td, th {
+		  padding: 15px 5px;
+		  display: table-cell;
+		  text-align: left;
+		  vertical-align: middle;
+		  border-radius: 2px; }
+	</style>
+</head>
+<body>
+	<table class="striped">
+		<thead>
+			<tr>
+				<th>COMMON</th>
+				<th>BOTANICAL</th>
+				<th>ZONE</th>
+				<th>LIGHT</th>
+				<th>PRICE</th>
+				<th>AVAILABILITY</th>
+			</tr>
+		</thead>
+		<tbody>
+		{{#CATALOG.PLANT}}
+          <tr>
+            <td>{{COMMON}}</td>
+            <td>{{BOTANICAL}}</td>
+            <td>{{ZONE}}</td>
+            <td>{{LIGHT}}</td>
+            <td>{{PRICE}}</td>
+            <td>{{AVAILABILITY}}</td>
+          </tr>
+        {{/CATALOG.PLANT}}
+        </tbody>
+	</table>
+</body>
+</html>
